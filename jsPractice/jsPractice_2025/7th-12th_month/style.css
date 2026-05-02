@@ -1,0 +1,66 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #222;
+}
+
+main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid #fff;
+  padding: 0 0 0 1rem;
+}
+main h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: skyblue;
+  margin: 1rem 0 0.8rem;
+}
+main #cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0.8rem;
+}
+main #cards .items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid #b47272;
+  padding: 1em;
+}
+main #cards .items .img_container {
+  display: flex;
+  border: 1px solid #860f0f;
+  height: 240px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+main #cards .items .img_container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  align-items: center;
+}
+main #cards .items h5 {
+  font-size: 1.5rem;
+  color: #af9797;
+  margin: 0.5rem;
+}
+main #cards .items button {
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.8em 1.2em;
+  color: rgb(66, 82, 88);
+  background-color: #af9797;
+  border-radius: 24px;
+  border: none;
+}/*# sourceMappingURL=style.css.map */
