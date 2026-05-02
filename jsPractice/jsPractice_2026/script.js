@@ -76,7 +76,7 @@ cart.forEach(e => {
 tPrice > 100 ? console.log(tPrice * 0.90) : console.log(tPrice);
 
 
-//Question 6
+// Question 6
 
 let arr3 = [1, 2, 2, 3, 4, 4, 5];
 let uniqueArr = [];
@@ -202,7 +202,7 @@ function calculate(a, b, operation) {
 console.log(calculate(2, 0, 'divide'));
 
 
-//Question 12
+// Question 12
 
 function makeMultiplier(margin) {
     return function(e) {
@@ -217,7 +217,7 @@ let double = makeMultiplier(2);
 console.log(double(5));
 
 
-//Question 13
+// Question 13
 
 function createToggler() {
     let status = true;
@@ -269,6 +269,36 @@ let sorted2 = setting2.split('').sort().join('');
 sorted1 === sorted2 ? console.log(`'${str1}' & '${str2}' are Anagrams of each other`) : console.log(`'${str1}' & '${str2}' are not Anagrams of each other`);
 
 
-//Queestion 16
+// Queestion 16
 
+let letter = "apple";
+let alphabet = {};
+
+for (let char of letter) {
+    
+    alphabet[char] = (alphabet[char] || 0) + 1;
+}
+
+console.log(alphabet);
+
+
+// Question 17
+
+function flatten(nestArr) {
+    let flatArr = [];
+
+    for (let item of nestArr) {
+        if (Array.isArray(item)) {
+            flatArr = flatArr.concat(flatten(item));
+        } else {
+            flatArr.push(item);
+        }
+    }
+    return flatArr;
+}
+
+console.log(flatten([1, [2, 3], [[4, 5, [6]]]]));
+
+
+// Question 18
 
