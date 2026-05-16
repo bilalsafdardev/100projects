@@ -1,0 +1,114 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #333;
+    color: wheat;
+}
+
+main {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .toggle {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 32px;
+        margin: 16px 0;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            background-color: #222;
+            top: 0; bottom: 0; left: 0; right: 0;
+            cursor: pointer;
+            border-radius: 32px;
+            transition: 0.4s;
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 24px;
+                width: 24px;
+                border-radius: 50%;
+                background-color: wheat;
+                bottom: 4px;
+                left: 4px;
+                transition: 0.4s;
+
+            }
+        }
+
+        input:checked + .slider {
+            background-color: salmon;
+        }
+
+        input:checked + .slider::before {
+            transform: translateX(20px);
+        }
+
+
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 70%;
+        width: 50%;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 2px solid wheat;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 24px;
+        }
+
+        .card_info {
+            padding: 4px;
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            p {
+                padding: 8px 5px 18px 5px;
+            }
+
+            button {
+                height: 48px;
+                width: 164px;
+                font-size: 1.25rem;
+                border: none;
+                border-radius: 20px;
+                font-weight: 900;
+                color: #222;
+                background-color: salmon;
+                
+            }
+        }
+    }
+}
+
+.light {
+    color: salmon;
+    background-color: wheat;
+}
+
