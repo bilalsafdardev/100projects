@@ -1,0 +1,51 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: wheat;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    button {
+        width: 10em;
+        height: 2.5em;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: salmon;
+        cursor: pointer;
+        transition: ease 400ms;
+        z-index: 9;
+        
+        &:hover {
+            transform: scale(0.96);
+        }
+    }
+
+    .quote_box {
+        display: flex;
+        min-width: fit-content;
+        flex-direction: column;
+        text-align: flex-start;
+        padding: 4%;
+        row-gap: 12px;
+        color: salmon;
+        position: absolute;
+        z-index: 0;
+    }
+}
