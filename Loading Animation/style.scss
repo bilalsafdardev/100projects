@@ -1,0 +1,84 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    background-color: #000;
+    color: sandybrown;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+
+    .box {
+        width: minmax(40%, 80%);
+        margin: 0 6%;
+        height: minmax(60%, fit-content);
+        padding: 8%;
+        row-gap: 1.25em;
+        border-radius: 1em;
+        border: 1px solid whitesmoke;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-size: 1.25rem;
+
+            span {
+                color: skyblue;
+                font-style: italic;
+            }
+        }
+
+        .outer {
+            width: 100%;
+            height: 1.25rem;
+            background-color: #666;
+            border-radius: 1em;
+            
+            .inner {
+                width: 0%;
+                height: 1.25rem;
+                background-color: #fff;
+                border-radius: 1em;
+            }
+        
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1em;
+
+            h3 {
+                font-size: 4rem;
+            }
+
+            button {
+                height: 2.5em;
+                width: 8em;
+                align-self: center;
+                font-size: 1.5rem;
+                font-weight: 800;
+                border-radius: 1.25em;
+                border: 1px solid transparent;
+                cursor: pointer;
+                transition: all ease 0.2s;
+                user-select: none;
+
+                &:hover {
+                    transform: scale(0.98);
+                }
+            }
+        }
+    }
+}
