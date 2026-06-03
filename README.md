@@ -1,2 +1,2 @@
-# 100projectschallange
-This repo is dedicated to my continueous effort to complete 100 Project in Web Dev.
+# Show Progress Before Learing OOP
+This repo is dedicated to one of my efforts to learn Web Dev.
