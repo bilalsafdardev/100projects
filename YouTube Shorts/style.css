@@ -1,0 +1,140 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body, main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(22, 22, 22);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar, main::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.2rem;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  background-image: linear-gradient(180deg, rgb(18, 18, 18), rgb(22, 22, 22), black);
+}
+
+.single_short {
+  flex: 0 0 100%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  margin: 0;
+  border: 1px solid rgba(225, 225, 225, 0.5);
+}
+.single_short video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.single_short .info {
+  height: auto;
+  min-height: 6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  position: absolute;
+  bottom: 0;
+  padding: 0.6rem;
+}
+.single_short .info .details {
+  display: flex;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+  align-items: center;
+}
+.single_short .info .details .profile_pic {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+}
+.single_short .info .details .profile_pic img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.single_short .info .details .account {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  white-space: nowrap;
+}
+.single_short .info .details .account h4 {
+  font-size: 0.96rem;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.single_short .info .details .account button {
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border-radius: 0.25em;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0 0.5em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.single_short .info .caption {
+  padding: 0.2rem 0 0.4rem 0;
+}
+.single_short .info .caption h3 {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.single_short .socials {
+  position: absolute;
+  right: 0;
+  bottom: 12%;
+}
+.single_short .socials .impression {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  cursor: pointer;
+}
+.single_short .socials .impression i {
+  color: white;
+  font-size: 1.6rem;
+}
+.single_short .socials .impression i.ri-heart-fill {
+  color: red;
+}
+.single_short .socials .impression h4 {
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 300;
+}/*# sourceMappingURL=style.css.map */
